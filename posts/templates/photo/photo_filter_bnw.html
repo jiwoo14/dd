@@ -1,0 +1,36 @@
+
+{% extends 'photo/photo_base.html' %}
+{% block content %}
+
+
+            <div class="array">
+                {% for bnws in photo_bnw_posts %}
+                        <div class="card">
+                            <div class="box-1">
+                                <img src="{{ bnws.image1.url  }}" width="200" height="250" alt = "{{ bnws.title }}">
+                            </div>
+                            <div class="box-2">
+                                <h4>{{ bnws.title }}(id : {{ user.username }})</h4>
+                                <a href="{% url 'photo_detail' bnws.id %}"><p>{{ bnws.text|slice:":15" }}...more</p></a>
+                            </div>
+                        </div>
+                {% endfor %}
+            </div>
+
+            <div class="paginator">
+                {% if is_paginated %}
+                    {% if page_obj.has_previous %}
+                        <a href="?page={{ page_obj.previous_page_number }}">◀</a>
+                    {% else %}
+                    <span>◀</span>
+                    {% endif %}
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}">▶</a>
+                    {% else %}
+                        <span>▶</span>
+                    {% endif %}
+                {% endif %}
+            </div>
+
+{% endblock content %}
+
