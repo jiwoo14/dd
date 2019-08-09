@@ -50,8 +50,8 @@
         </div>
         <div class="detail_active">
             {% if user.role == '모델' %}
-                <a href="{% url 'model_edit' model_post_detail.id %}"><button>edit</button></a>
-                <a href="{% url 'model_delete' model_post_detail.id %}"><button>delete</button></a>
+                <a href="{% url 'edit' post_detail.id %}"><button>edit</button></a>
+                <a href="{% url 'delete' post_detail.id %}"><button>delete</button></a>
             {% endif %}
         </div>
     </div>

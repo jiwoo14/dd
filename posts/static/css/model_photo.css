@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Lacquer&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap');
+@font-face { font-family: 'KOMACON'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/KOMACON.woff') format('woff'); font-weight: normal; font-style: normal; }
 
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: 'KOMACON';
 }
 
 
@@ -92,11 +94,12 @@ body {
 }
 
 .cute {
-    color: black;
+    color: white;
     font-size: 1.1em;
-    background-color: rgb(249,194,69);
-    border: rgb(249,194,69) 2px solid;
+    background-color: darkorange;
+    border: darkorange 2px solid;
     border-radius: 4px;
+    font-family: 'KOMACON';
 }
 
 .cool {
@@ -105,6 +108,7 @@ body {
     background-color: rgb(253,79,91);
     border: rgb(253,79,91) 2px solid;
     border-radius: 4px;
+    font-family: 'KOMACON';
 }
 
 .mono {
@@ -113,6 +117,7 @@ body {
     background-color: black;
     border: black 2px solid;
     border-radius: 4px;
+    font-family: 'KOMACON';
 }
 
 .plus {
@@ -121,6 +126,7 @@ body {
     background-color: rgb(77,139,124);
     border: rgb(77,139,124) 2px solid;
     border-radius: 4px;
+    font-family: 'KOMACON';
 }
 
 .upload_post {
@@ -296,4 +302,21 @@ body {
     font-size: 1.3em;
     margin: 10% 0 0 20%;
     display: block;
+}
+
+.sixth {
+  border-color: rgb(77,139,124);
+    color: rgb(77,139,124);
+    font-size: 1.3em;
+    font-family: 'Lacquer', sans-serif;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.container {
+    color: rgb(77,139,124);
+    position: absolute;
+    top: 20%;
+    left: 33%;
+    font-family: 'Lacquer', sans-serif;
 }

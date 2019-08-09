@@ -21,23 +21,24 @@
                 <a href="{% url 'signup' %}">registration</a>
             {% endif %}
         </div>
-        <div class="blog_content">
-            <a class="search" href="{% url 'search' %}">search</a>
-            <a class="upload" href="{% url 'post_write' %}">upload</a>
-            <div class="board">
-                {% block content %}{% endblock %}
-            </div>
-            <div class="paginator">
-                {% if is_paginated %}
-                    {% if page_obj.has_previous %}
-                        <a href="{{ request.path }}?page={{ page_obj.previous_page_number }}">back</a>
+            <div class="blog_content">
+                <a class="search" href="{% url 'search' %}">search</a>
+                <a class="upload" href="{% url 'post_write' %}">upload</a>
+                <div class="board">
+                    {% block content %}{% endblock %}
+                </div>
+                <br>
+                <div class="paginator">
+                    {% if is_paginated %}
+                        {% if page_obj.has_previous %}
+                            <a href="{{ request.path }}?page={{ page_obj.previous_page_number }}">back</a>
+                        {% endif %}
+                        <a href="#">{{ page_obj.number }} / {{ page_obj.paginator.num_pages }} </a>
+                        {% if page_obj.has_next %}
+                            <a href="{{ request.path }}?page={{ page_obj.next_page_number }}">next</a>
+                        {% endif %}
                     {% endif %}
-                    <a href="#">{{ page_obj.number }} / {{ page_obj.paginator.num_pages }} </a>
-                    {% if page_obj.has_next %}
-                        <a href="{{ request.path }}?page={{ page_obj.next_page_number }}">next</a>
-                    {% endif %}
-                {% endif %}
+                </div>
             </div>
-        </div>
     </body>
 </html>

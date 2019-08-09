@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Lacquer&display=swap');
+@font-face { font-family: 'KOMACON'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/KOMACON.woff') format('woff'); font-weight: normal; font-style: normal; }
 
 body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    font-family: 'KOMACON';
 }
 
 .green {
